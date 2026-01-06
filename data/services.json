@@ -1,0 +1,51 @@
+[
+  {
+    "number": 1,
+    "title": "Web Development",
+    "description": "Custom websites built for performance, usability, and seamless brand integration.",
+    "tags": ["Web Design", "Development", "SEO", "Prototyping"],
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80"
+  },
+  {
+    "number": 2,
+    "title": "App Development",
+    "description": "Native and cross-platform mobile applications designed for exceptional user experiences.",
+    "tags": ["iOS", "Android", "React Native", "Flutter"],
+    "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&q=80"
+  },
+  {
+    "number": 3,
+    "title": "UI / UX Design",
+    "description": "Intuitive interfaces and experiences that delight users and drive engagement.",
+    "tags": ["Research", "Wireframes", "Prototyping", "Testing"],
+    "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&q=80"
+  },
+  {
+    "number": 4,
+    "title": "Graphics Design",
+    "description": "Creative visual designs that communicate your brand with clarity and impact.",
+    "tags": ["Adobe Photoshop", "Adobe Illustrator", "Figma", "Adobe Lightroom"],
+    "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=1200&q=80"
+  },
+  {
+    "number": 5,
+    "title": "Video Editing",
+    "description": "Professional video production and editing that captures attention.",
+    "tags": ["Adobe Premiere Pro", "After Effects", "DaVinci Resolve", "Blender"],
+    "image": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1200&q=80"
+  },
+  {
+    "number": 6,
+    "title": "Content Writing",
+    "description": "Compelling content tailored to your brand voice and audience.",
+    "tags": ["Copywriting", "SEO", "Blogs", "Messaging"],
+    "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&q=80"
+  },
+  {
+    "number": 7,
+    "title": "Smart Electronics Design",
+    "description": "Innovative IoT and embedded systems designed to bring hardware ideas to life.",
+    "tags": ["IoT", "PCB", "Firmware", "Prototyping"],
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80"
+  }
+]

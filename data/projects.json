@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "slug": "chitroyug-academy",
+    "title": "ChitroYug Academy of Fine Arts",
+    "shortDescription": "Comprehensive digital platform for prestigious fine arts academy",
+    "image": "/works/chitroyug-hero.jpg",
+    "client": "ChitroYug Academy",
+    "industry": "Education & Fine Arts",
+    "services": ["Web Development", "UI/UX Design", "Brand Integration", "Content Strategy"],
+    "duration": "3 Weeks",
+    "technologies": ["Next.js 16", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+    "overview": "ChitroYug, a prestigious fine arts academy with 12+ years of teaching excellence in Northeast India, required a modern digital presence to match their legacy. The academy, founded by renowned artists Abhi Sarkar and Mith Sarkar, needed a platform that would serve as an informational hub, course catalog, student gallery, and enrollment portal while reflecting the artistic excellence they're known for.",
+    "businessContext": "The academy had been relying on traditional marketing methods and social media for student acquisition. Without a centralized digital platform, they struggled to effectively communicate their comprehensive curriculum, showcase student achievements, and streamline the enrollment process. Prospective students found it difficult to understand course structures, pricing, and the academy's credentials.",
+    "challenge": "The primary challenges included: (1) Creating a professional digital presence that reflects 12+ years of artistic excellence without appearing corporate or impersonal, (2) Organizing and presenting complex course structures across multiple diploma programs with semester-wise breakdowns in an intuitive manner, (3) Building trust with prospective students through credibility indicators (ISO certification, UDYAM registration, student testimonials), (4) Designing an accessible platform for users across Northeast India with varying internet connectivity, (5) Integrating enrollment processes seamlessly without requiring backend infrastructure.",
+    "strategicApproach": [
+      "Conducted stakeholder interviews with both founders to understand their vision and teaching philosophy",
+      "Analyzed competitor art academies and identified gaps in their digital experiences",
+      "Developed a content strategy prioritizing student success stories and instructor credibility",
+      "Created a mobile-first design considering the target demographic's device preferences",
+      "Designed an information architecture that guides prospective students through awareness, consideration, and enrollment stages"
+    ],
+    "solution": "We developed a modern, responsive website using Next.js 14, leveraging server-side rendering for optimal performance and SEO. The platform features: (1) A dynamic course catalog with detailed semester-wise curriculum breakdowns, transparent pricing, and clear learning outcomes, (2) An interactive gallery showcasing student and instructor artwork, building credibility and inspiration, (3) Comprehensive founder profiles highlighting their expertise and teaching philosophy, (4) Integration with Google Forms for seamless enrollment without requiring complex backend systems, (5) Optimized image delivery using Next.js Image component for fast loading even on slower connections, (6) Social media integration connecting to YouTube, Instagram, and Facebook for extended reach.",
+    "technicalImplementation": [
+      "Built with Next.js 14 for optimal performance, SEO, and modern React features",
+      "Implemented TypeScript for type-safe development and better code maintainability",
+      "Used Tailwind CSS for responsive, consistent design system across all pages",
+      "Leveraged Next.js Image Optimization for automatic image compression and responsive images",
+      "Deployed on Vercel with automatic CI/CD pipeline and edge network distribution",
+      "Implemented accessibility best practices including semantic HTML and ARIA labels",
+      "Created reusable component architecture for CourseCard, TestimonialCard, and ContactForm"
+    ],
+    "keyFeatures": [
+      "Six comprehensive pages: Home, Gallery, About, Courses, Feedback, Contact",
+      "Detailed course catalog with semester-wise breakdown of two diploma programs",
+      "Interactive artwork gallery with lightbox functionality",
+      "Student testimonial section with verified reviews",
+      "Multiple contact methods: form, WhatsApp, phone, email",
+      "Credibility indicators: ISO certification, UDYAM registration displayed prominently",
+      "Responsive design optimized for desktop, tablet, and mobile devices",
+      "Fast page loads with optimized images and code splitting"
+    ],
+    "results": [
+      "Successfully launched within 8 weeks, meeting all stakeholder requirements",
+      "Established a professional digital presence reflecting 12+ years of artistic excellence",
+      "Streamlined enrollment process with direct Google Forms integration",
+      "Created a centralized information hub reducing repetitive inquiries by consolidating course details, pricing, and founder credentials",
+      "Improved user experience with mobile-first design serving the target demographic effectively",
+      "Enhanced credibility through strategic placement of certifications and student testimonials",
+      "Achieved excellent performance metrics with optimized Next.js architecture",
+      "Provided scalable foundation for future enhancements including payment integration and student portal"
+    ],
+    "clientTestimonial": {
+      "quote": "The website perfectly captures the essence of our academy. It's not just a digital brochure—it's an extension of our teaching philosophy and artistic vision.",
+      "author": "Abhi Sarkar",
+      "position": "Founder, ChitroYug Academy"
+    },
+    "metrics": [
+      {
+        "label": "Course Information Pages",
+        "value": "6+ detailed pages"
+      },
+      {
+        "label": "Diploma Programs Featured",
+        "value": "2 comprehensive programs"
+      },
+      {
+        "label": "Years of Legacy Showcased",
+        "value": "12+ years"
+      },
+      {
+        "label": "Student Success Stories",
+        "value": "Multiple testimonials"
+      }
+    ]
+  }
+]
