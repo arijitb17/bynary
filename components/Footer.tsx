@@ -98,14 +98,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-20">
           
           {/* Get in Touch */}
-          <div ref={setColumnRef(0)}>
+          <div ref={setColumnRef(0)} className="text-center md:text-left">
             <h3 className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-6 font-medium">
               Get in Touch
             </h3>
             <div className="space-y-4">
               <a 
                 href="mailto:bynary.in@gmail.com" 
-                className="text-gray-600 flex items-center gap-2 text-lg md:text-xl font-medium hover:opacity-60 transition-opacity group"
+                className="text-gray-600 flex items-center justify-center md:justify-start gap-2 text-lg md:text-xl font-medium hover:opacity-60 transition-opacity group"
               >
                 <Mail className="w-5 h-5" />
                 <span>bynary.in@gmail.com</span>
@@ -114,23 +114,22 @@ export default function Footer() {
           </div>
 
           {/* Our Address */}
-          <div ref={setColumnRef(1)}>
+          <div ref={setColumnRef(1)} className="text-center md:text-left">
             <h3 className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-6 font-medium">
               Our Address
             </h3>
             <div className="space-y-2 text-base md:text-lg">
-  <div className="flex items-center gap-2 text-gray-600">
-    <MapPin className="w-5 h-5" />
-    <span>Guwahati, Assam</span>
-  </div>
+              <div className="flex items-center justify-center md:justify-start gap-2 text-gray-600">
+                <MapPin className="w-5 h-5" />
+                <span>Guwahati, Assam</span>
+              </div>
 
-  <p className="text-gray-600 ml-7">India</p>
-</div>
-
+              <p className="text-gray-600">India</p>
+            </div>
           </div>
 
           {/* Follow us */}
-          <div ref={setColumnRef(2)}>
+          <div ref={setColumnRef(2)} className="text-center md:text-left">
             <h3 className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-6 font-medium">
               Follow us
             </h3>
@@ -155,52 +154,51 @@ export default function Footer() {
           </div>
 
           {/* Menu */}
-          <div ref={setColumnRef(3)}>
+          <div ref={setColumnRef(3)} className="text-center md:text-left">
             <h3 className="text-xs uppercase tracking-[0.2em] text-gray-500 mb-6 font-medium">
               Menu
             </h3>
             <div className="space-y-3">
-  <button
-    onClick={() => scrollToSection("#home")}
-    className="text-gray-600 block text-base md:text-lg hover:opacity-60 transition-opacity text-left"
-  >
-    Home
-  </button>
+              <button
+                onClick={() => scrollToSection("#home")}
+                className="text-gray-600 block w-full text-base md:text-lg hover:opacity-60 transition-opacity"
+              >
+                Home
+              </button>
 
-  <button
-    onClick={() => scrollToSection("#projects")}
-    className="text-gray-600 block text-base md:text-lg hover:opacity-60 transition-opacity text-left"
-  >
-    Projects
-  </button>
+              <button
+                onClick={() => scrollToSection("#projects")}
+                className="text-gray-600 block w-full text-base md:text-lg hover:opacity-60 transition-opacity"
+              >
+                Projects
+              </button>
 
-  <button
-    onClick={() => scrollToSection("#about")}
-    className="text-gray-600 block text-base md:text-lg hover:opacity-60 transition-opacity text-left"
-  >
-    About
-  </button>
+              <button
+                onClick={() => scrollToSection("#about")}
+                className="text-gray-600 block w-full text-base md:text-lg hover:opacity-60 transition-opacity"
+              >
+                About
+              </button>
 
-  <button
-    onClick={() => scrollToSection("#blog")}
-    className="text-gray-600 block text-base md:text-lg hover:opacity-60 transition-opacity text-left"
-  >
-    Blog
-  </button>
+              <button
+                onClick={() => scrollToSection("#blog")}
+                className="text-gray-600 block w-full text-base md:text-lg hover:opacity-60 transition-opacity"
+              >
+                Blog
+              </button>
 
-  <button
-    onClick={() => scrollToSection("#contact")}
-    className="text-gray-600 block text-base md:text-lg hover:opacity-60 transition-opacity text-left"
-  >
-    Contact
-  </button>
-</div>
-
+              <button
+                onClick={() => scrollToSection("#contact")}
+                className="text-gray-600 block w-full text-base md:text-lg hover:opacity-60 transition-opacity"
+              >
+                Contact
+              </button>
+            </div>
           </div>
         </div>
 
         {/* Large Logo */}
-        <div className="mb-12 overflow-hidden">
+        <div className="mb-12 overflow-hidden text-center">
           <h2 
             ref={logoRef}
             className="text-gray-400 text-[15vw] md:text-[12vw] lg:text-[10vw] font-bold leading-none tracking-tight"
@@ -212,7 +210,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div 
           ref={bottomRef}
-          className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-gray-300"
+          className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-gray-300 text-center md:text-left"
         >
           <p className="text-sm text-gray-600">
             © 2026 BYNARY. All rights reserved.

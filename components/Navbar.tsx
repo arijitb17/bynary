@@ -16,28 +16,53 @@ export default function Navbar() {
   const router = useRouter();
    
   const handleContactClick = () => {
-    sessionStorage.setItem("scrollTo", "contact");
-    router.push("/");
+    const isHomePage = window.location.pathname === "/";
+    if (isHomePage) {
+      scrollToSection("#contact");
+    } else {
+      sessionStorage.setItem("scrollTo", "contact");
+      router.push("/");
+    }
   };
 
   const handleHomeClick = () => {
-    sessionStorage.setItem("scrollTo", "home");
-    router.push("/");
+    const isHomePage = window.location.pathname === "/";
+    if (isHomePage) {
+      scrollToSection("#home");
+    } else {
+      sessionStorage.setItem("scrollTo", "home");
+      router.push("/");
+    }
   };
 
   const handleProjectsClick = () => {
-    sessionStorage.setItem("scrollTo", "projects");
-    router.push("/");
+    const isHomePage = window.location.pathname === "/";
+    if (isHomePage) {
+      scrollToSection("#projects");
+    } else {
+      sessionStorage.setItem("scrollTo", "projects");
+      router.push("/");
+    }
   };
 
   const handleAboutClick = () => {
-    sessionStorage.setItem("scrollTo", "about");
-    router.push("/");
+    const isHomePage = window.location.pathname === "/";
+    if (isHomePage) {
+      scrollToSection("#about");
+    } else {
+      sessionStorage.setItem("scrollTo", "about");
+      router.push("/");
+    }
   };
 
   const handleBlogClick = () => {
-    sessionStorage.setItem("scrollTo", "blog");
-    router.push("/");
+    const isHomePage = window.location.pathname === "/";
+    if (isHomePage) {
+      scrollToSection("#blog");
+    } else {
+      sessionStorage.setItem("scrollTo", "blog");
+      router.push("/");
+    }
   };
 
   useEffect(() => {
@@ -109,7 +134,7 @@ export default function Navbar() {
           {/* Desktop Navigation Links */}
           <div
             ref={linksRef}
-            className="hidden md:flex items-center gap-6 lg:gap-10"
+            className="hidden lg:flex items-center gap-6 lg:gap-10"
           >
             <button
               onClick={handleHomeClick}
@@ -146,7 +171,7 @@ export default function Navbar() {
 
 
           {/* Contact Button (Desktop) */}
-          <div ref={buttonRef} className="hidden md:block" style={{ opacity: 1 }}>
+          <div ref={buttonRef} className="hidden lg:block" style={{ opacity: 1 }}>
             <button
               onClick={handleContactClick}
               className="
@@ -171,7 +196,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
+            className="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" style={{ color: '#1a1a1a' }} /> : <Menu className="w-6 h-6" style={{ color: '#1a1a1a' }} />}
           </button>
@@ -179,7 +204,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 border-b border-gray-200 shadow-lg" style={{ backgroundColor: '#f8f8f8' }}>
+          <div className="lg:hidden absolute top-full left-0 right-0 border-b border-gray-200 shadow-lg" style={{ backgroundColor: '#f8f8f8' }}>
             <div className="flex flex-col px-6 py-6 gap-4">
               <button
                 onClick={() => {

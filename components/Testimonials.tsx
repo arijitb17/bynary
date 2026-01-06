@@ -78,15 +78,16 @@ export default function TestimonialsSection() {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="bg-white py-20 md:py-32 px-6 md:px-12 lg:px-16 overflow-hidden">
+    <section className="bg-white py-12 sm:py-16 md:py-24 lg:py-32 px-4 sm:px-6 md:px-12 lg:px-16 overflow-hidden">
       <div className="max-w-[1600px] mx-auto">
         
+        {/* Section Header */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex items-center justify-center gap-2 mb-16"
+          className="flex items-center justify-center gap-2 mb-10 sm:mb-12 md:mb-16"
         >
           <motion.div 
             className="w-2 h-2 bg-black rounded-full"
@@ -98,16 +99,18 @@ export default function TestimonialsSection() {
           </span>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-20 items-center">
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 mb-12 sm:mb-16 md:mb-20 items-center">
           
+          {/* Image Section */}
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative max-w-md mx-auto lg:mx-0"
+            className="relative w-full max-w-[400px] sm:max-w-md mx-auto lg:mx-0"
           >
-            <div className="aspect-[3/4] overflow-hidden rounded-2xl bg-gray-100 relative">
+            <div className="aspect-[3/4] w-full overflow-hidden rounded-2xl bg-gray-100 relative">
               <AnimatePresence mode="wait" custom={direction}>
                 <motion.img
                   key={currentIndex}
@@ -127,8 +130,9 @@ export default function TestimonialsSection() {
               </AnimatePresence>
             </div>
             
+            {/* Floating Quote Icon */}
             <motion.div 
-              className="absolute -top-4 -right-4 w-20 h-20 bg-white rounded-full border-4 border-gray-100 flex items-center justify-center shadow-lg"
+              className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-full border-4 border-gray-100 flex items-center justify-center shadow-lg"
               animate={{ 
                 rotate: [0, 10, -10, 0],
                 scale: [1, 1.05, 1]
@@ -139,12 +143,13 @@ export default function TestimonialsSection() {
                 ease: "easeInOut"
               }}
             >
-              <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center">
-                <Quote className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-600 rounded-full flex items-center justify-center">
+                <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
             </motion.div>
           </motion.div>
 
+          {/* Content Section */}
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -153,7 +158,8 @@ export default function TestimonialsSection() {
             className="flex flex-col justify-between"
           >
             
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
+              {/* Star Rating */}
               <AnimatePresence mode="wait">
                 <motion.div
                   key={`stars-${currentIndex}`}
@@ -161,7 +167,7 @@ export default function TestimonialsSection() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
                   transition={{ duration: 0.3 }}
-                  className="flex gap-1"
+                  className="flex gap-1 justify-center lg:justify-start"
                 >
                   {[...Array(currentTestimonial.rating)].map((_, i) => (
                     <motion.div
@@ -170,12 +176,13 @@ export default function TestimonialsSection() {
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: i * 0.1, duration: 0.3 }}
                     >
-                      <Star className="w-6 h-6 fill-black text-black" />
+                      <Star className="w-5 h-5 sm:w-6 sm:h-6 fill-black text-black" />
                     </motion.div>
                   ))}
                 </motion.div>
               </AnimatePresence>
 
+              {/* Quote */}
               <AnimatePresence mode="wait" custom={direction}>
                 <motion.blockquote
                   key={currentIndex}
@@ -188,12 +195,13 @@ export default function TestimonialsSection() {
                     x: { type: "spring", stiffness: 300, damping: 30 },
                     opacity: { duration: 0.4 }
                   }}
-                  className="text-2xl md:text-3xl lg:text-4xl font-light leading-relaxed text-gray-800"
+                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light leading-relaxed text-gray-800"
                 >
                   "{currentTestimonial.quote}"
                 </motion.blockquote>
               </AnimatePresence>
 
+              {/* Author Info */}
               <AnimatePresence mode="wait" custom={direction}>
                 <motion.div
                   key={`author-${currentIndex}`}
@@ -206,42 +214,44 @@ export default function TestimonialsSection() {
                     x: { type: "spring", stiffness: 300, damping: 30 },
                     opacity: { duration: 0.4 }
                   }}
-                  className="border-t border-gray-200 pt-6"
+                  className="border-t border-gray-200 pt-4 sm:pt-6 text-center lg:text-left"
                 >
-                  <p className="text-slate-900 text-xl font-semibold mb-1">
+                  <p className="text-slate-900 text-lg sm:text-xl font-semibold mb-1">
                     {currentTestimonial.name}
                   </p>
-                  <p className="text-base text-gray-600">
+                  <p className="text-sm sm:text-base text-gray-600">
                     {currentTestimonial.position}
                   </p>
                 </motion.div>
               </AnimatePresence>
             </div>
 
-            <div className="flex gap-4 mt-8">
+            {/* Navigation Buttons */}
+            <div className="flex gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center lg:justify-start">
               <motion.button
                 onClick={prevTestimonial}
-                className="w-12 h-12 bg-black text-white !text-white rounded-full flex items-center justify-center"
+                className="w-11 h-11 sm:w-12 sm:h-12 bg-black text-white !text-white rounded-full flex items-center justify-center touch-manipulation"
                 whileHover={{ scale: 1.1, backgroundColor: "#1f2937" }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.2 }}
                 aria-label="Previous testimonial"
               >
-                <ChevronLeft className="w-6 h-6" />
+                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
               </motion.button>
               <motion.button
                 onClick={nextTestimonial}
-                className="w-12 h-12 bg-black text-white !text-white rounded-full flex items-center justify-center"
+                className="w-11 h-11 sm:w-12 sm:h-12 bg-black text-white !text-white rounded-full flex items-center justify-center touch-manipulation"
                 whileHover={{ scale: 1.1, backgroundColor: "#1f2937" }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.2 }}
                 aria-label="Next testimonial"
               >
-                <ChevronRight className="w-6 h-6" />
+                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
               </motion.button>
             </div>
 
-            <div className="flex gap-2 mt-6">
+            {/* Dots Indicator */}
+            <div className="flex gap-2 mt-4 sm:mt-6 justify-center lg:justify-start">
               {testimonials.map((_, index) => (
                 <motion.button
                   key={index}
@@ -249,7 +259,7 @@ export default function TestimonialsSection() {
                     setDirection(index > currentIndex ? 1 : -1);
                     setCurrentIndex(index);
                   }}
-                  className="h-1 rounded-full overflow-hidden"
+                  className="h-1 rounded-full overflow-hidden touch-manipulation"
                   animate={{
                     width: currentIndex === index ? '40px' : '8px',
                     backgroundColor: currentIndex === index ? '#000' : '#d1d5db'
@@ -262,15 +272,16 @@ export default function TestimonialsSection() {
           </motion.div>
         </div>
 
+        {/* Industries Marquee */}
         <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative overflow-hidden py-12 border-t border-gray-200"
+          className="relative overflow-hidden py-8 sm:py-10 md:py-12 border-t border-gray-200"
         >
           <motion.div
-            className="flex gap-12 md:gap-16"
+            className="flex gap-6 sm:gap-8 md:gap-12 lg:gap-16"
             animate={{
               x: [0, -1920]
             }}
@@ -285,14 +296,14 @@ export default function TestimonialsSection() {
             {[...industries, ...industries, ...industries].map((industry, index) => (
               <motion.div
                 key={index}
-                className="flex-shrink-0 px-6 py-3 border border-gray-300 rounded-full cursor-pointer"
+                className="flex-shrink-0 px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 border border-gray-300 rounded-full cursor-pointer"
                 whileHover={{ 
                   borderColor: "#000",
                   scale: 1.05
                 }}
                 transition={{ duration: 0.2 }}
               >
-                <span className="text-base md:text-lg font-medium text-gray-600 whitespace-nowrap">
+                <span className="text-sm sm:text-base md:text-lg font-medium text-gray-600 whitespace-nowrap">
                   {industry}
                 </span>
               </motion.div>
@@ -302,4 +313,4 @@ export default function TestimonialsSection() {
       </div>
     </section>
   );
-}
+} 
