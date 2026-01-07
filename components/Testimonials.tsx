@@ -2,45 +2,14 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
+import data from '@/data/testimonials.json';
 
 export default function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
-  const testimonials = [
-    {
-      quote: "Thanks to their data-driven social media strategy, our brand visibility skyrocketed, and engagement is at an all-time high.",
-      name: "Daniel M.",
-      position: "CEO, Horizon Fitness",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
-      rating: 5
-    },
-    {
-      quote: "The messaging they crafted for us perfectly captures our voice and has improved engagement across our channels.",
-      name: "Sophie L.",
-      position: "Marketing Director, Artisan",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80",
-      rating: 5
-    },
-    {
-      quote: "Their creative direction and design work elevated our brand to a whole new level—our visuals now stand out in a crowded market.",
-      name: "Rachel W.",
-      position: "Creative Lead, Lumina",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80",
-      rating: 5
-    }
-  ];
-
-  const industries = [
-    "E-Commerce",
-    "Healthcare",
-    "Technology",
-    "Fashion",
-    "Real Estate",
-    "Finance",
-    "Education",
-    "Hospitality"
-  ];
+  const testimonials = data.testimonials;
+  const industries = data.industries;
 
   const nextTestimonial = () => {
     setDirection(1);
@@ -143,7 +112,7 @@ export default function TestimonialsSection() {
                 ease: "easeInOut"
               }}
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-600 rounded-full flex items-center justify-center">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-soft-black rounded-full flex items-center justify-center">
                 <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
             </motion.div>
@@ -195,7 +164,7 @@ export default function TestimonialsSection() {
                     x: { type: "spring", stiffness: 300, damping: 30 },
                     opacity: { duration: 0.4 }
                   }}
-                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light leading-relaxed text-gray-800"
+                  className="text-sm sm:text-base md:text-lg lg:text-xl font-light leading-relaxed text-gray-800 text-justify"
                 >
                   "{currentTestimonial.quote}"
                 </motion.blockquote>
@@ -313,4 +282,4 @@ export default function TestimonialsSection() {
       </div>
     </section>
   );
-} 
+}

@@ -153,7 +153,7 @@ export default function ProcessSection() {
           </div>
 
           <span className="text-sm md:text-base text-gray-400 font-light absolute right-0 top-0">
-            ©2025
+            ©2026
           </span>
         </div>
 

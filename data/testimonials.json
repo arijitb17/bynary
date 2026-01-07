@@ -1,0 +1,21 @@
+{
+  "testimonials": [
+    {
+      "quote": "Working with this team was an absolute pleasure. Their attention to detail, creative ideas, and dedication brought our website to life beautifully. Every step felt smooth and stress-free. What impressed us most was their dedication and attention to detail. They transformed our ideas into a beautiful and functional website. The team was responsive, patient, and supportive throughout the process. Highly recommended for anyone looking for excellence.",
+      "name": "Abhishek Sarkar",
+      "position": "Founder, Chitro Yug",
+      "image": "/testimonials/abhi.jpg",
+      "rating": 5
+    }
+  ],
+  "industries": [
+    "E-Commerce",
+    "Healthcare",
+    "Technology",
+    "Fashion",
+    "Real Estate",
+    "Finance",
+    "Education",
+    "Hospitality"
+  ]
+}
