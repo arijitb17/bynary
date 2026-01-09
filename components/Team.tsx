@@ -16,11 +16,11 @@ export default function TeamSection() {
   const scrollArrowRef = useRef<HTMLButtonElement>(null);
 
   const teamImages = [
-    "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80",
-    "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=600&q=80",
-    "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80",
-    "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=600&q=80",
-    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
+    "/team/tanmay.png",
+    "/team/arijit.png",
+    "/team/shweta.png",
+    "/team/janjyoti.png",
+    "/team/spandan.png"
   ];
 
   useEffect(() => {
@@ -138,7 +138,7 @@ export default function TeamSection() {
 
         <div className="mb-16">
           <h2 ref={headingRef} className="text-slate-900 text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light leading-relaxed text-center max-w-6xl mx-auto opacity-0">
-           We’re a young digital agency working at the edge of today’s landscape.
+           We're a young digital agency working at the edge of today's landscape.
 We combine bold ideas with lasting quality—agile, focused, and driven by progress.
 Growth and learning shape everything we build.
           </h2>
@@ -161,14 +161,15 @@ Growth and learning shape everything we build.
             ))}
           </div>
 
-          <div ref={overlayContentRef} className="absolute inset-0 flex flex-col items-center justify-between py-12 md:py-16 opacity-0">
-            <h3 className="text-white text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold drop-shadow-lg">
+          {/* Overlay content */}
+          <div ref={overlayContentRef} className="absolute inset-0 flex flex-col items-center justify-between py-8 md:py-12 pointer-events-none opacity-0">
+            <h3 className="text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold drop-shadow-2xl">
               The Team
             </h3>
             
             <button 
             onClick={() => scrollToSection("#contact")}
-            className="group flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full hover:bg-black hover:text-white transition-all duration-300 shadow-lg">
+            className="pointer-events-auto group flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full hover:bg-black hover:text-white transition-all duration-300 shadow-2xl">
               <span className="text-sm md:text-base font-medium uppercase tracking-wider">
                 MEET US
               </span>

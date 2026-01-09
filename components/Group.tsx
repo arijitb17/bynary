@@ -8,7 +8,7 @@ export default function TeamPhotoSection() {
       {/* Background Team Photo */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=2000&q=80"
+          src="/team/group.png"
           alt="Our team"
           className="w-full h-full object-cover"
         />

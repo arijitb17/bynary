@@ -67,7 +67,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <img 
           ref={imageRef}
-          src="/hero.jpeg"
+          src="/hero.png"
           alt="Digital Human"
           className="w-full h-full object-cover object-center opacity-0"
           style={{
